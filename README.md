@@ -9,23 +9,23 @@ This algorithm uses ord() and chr() to get ASCII (or Unicode idk) values for eac
 
 ### encrypt.py
 ```
-What's the key? 2
+What's the key? 101
 What's the message? encrypted
-encrypted text: 𐱭𐳐𐱗𐳼𐵉𐳦𐴒𐱭𐱢
+encrypted text: 𫈚𭓦𫾸𯐮𱉺𰊬𱢙𯚀𯶀
 ```
 ### decrypt.py
 ```
-What's the key? 2
+What's the key? 101
 What's the encrypted message? ������������������
 decrypted text: encrypted
 ```
 
 ## how to use it
 
-Let me start off with this: Don't actually use this. This is the worst thing you could use to protect yourself.
+Let me start off with this: Don't actually use this. This is the code-equivalent of a warcrime
 
 That being said, if you want to see how bad it is:
-- Fill in the key field as a very small integer (no more than 5, it'll completely break)
+- Fill in the key field as an integer
 - Fill in some text
 - It will now give you ~garbled~ encrypted text
 
@@ -33,4 +33,3 @@ The same goes for the decryption algorithm:
 - Fill in the key field with the same key you used on encrypt.py
 - Copy-paste the encrypted text from encrypt.py's output
 - It will give you back your original output
-

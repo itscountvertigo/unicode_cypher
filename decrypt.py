@@ -19,7 +19,7 @@ def first_value(key, num_1, num_2, num_3):
     value_1 = num_1
 
     for _ in range(key):
-        value_1 = value_1 * num_2
+        value_1 += num_2
     
     return value_1 + num_3 * key
 
@@ -27,13 +27,13 @@ def second_value(key, num_1, num_2, num_3):
     value_2 = num_1 + key
     
     for _ in range(num_3):
-        value_2 = value_2 * key
+        value_2 += num_2 + key
         value_2 -= key
     
     return value_2
 
 def third_value(key, num_1, num_2):
-    return key * num_1 + (num_2 - key * 2)
+    return key * num_1 + (num_2 - key * 3)
 
 output = ''
 
@@ -43,6 +43,7 @@ for each in message:
     value_3 = third_value(key, 3, 2)
 
     output += chr(round(((each * value_3) / value_1) - value_2))
+    key += 1
 
 # print(value_1)
 # print(value_2)
